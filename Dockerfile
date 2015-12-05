@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 	php5-gd php5-intl php5-xsl
 
 #git for fetching magento2 git repository	
-RUN apt-get install -y git && apt-get purge 
+RUN apt-get install -y git apache2 && apt-get purge 
 
 #fetch  magneto2 docs
 RUN git clone https://github.com/magento/magento2.git /var/www/html
