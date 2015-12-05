@@ -1,5 +1,5 @@
 web:
-  image: sanqiu/Mage2-Docker
+  image: sanqiu/mage2-docker
   container_name: mage-web
   ports:
    - "80:80"
