@@ -20,8 +20,8 @@ COPY auth.json  /root/.composer/auth.json
 RUN cd /var/www/html/ && php5 /composer.phar install
 
 #enable apache2 rewrite
-RUN a2enmod rewrite && sed '166y/None/All/' /etc/apache2/apache2.conf 
+RUN a2enmod rewrite && sed -n '166s/None/All/' /etc/apache2/apache2.conf 
 
-
+EXPOSE 80
 CMD ["service apache2 start"]
 	
