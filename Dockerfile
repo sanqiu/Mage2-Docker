@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get install -y git apache2 && apt-get purge 
 
 #fetch  magneto2 docs
-RUN rm /var/www/html/* && git clone https://github.com/magento/magento2.git /var/www/html
+RUN rm -fR /var/www/html/* && git clone https://github.com/magento/magento2.git /var/www/html
 
 #get composer
 RUN cd / && curl -sS https://getcomposer.org/installer | php5
