@@ -15,7 +15,7 @@ RUN rm -fR /var/www/html/* && git clone https://github.com/magento/magento2.git 
 #get composer
 RUN cd / && curl -sS https://getcomposer.org/installer | php5
 
-#replace with your own if u like
+#replace with your own when self-building
 COPY auth.json  /root/.composer/auth.json
 RUN cd /var/www/html/ && php5 /composer.phar install
 
