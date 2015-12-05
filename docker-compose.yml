@@ -10,6 +10,6 @@ db:
   container_name: mage-db
   environment:
     - MYSQL_ROOT_PASSWORD="root"
-    - MYSQL_DATABASE=magento2
+    - MYSQL_DATABASE="magento2"
     - MYSQL_USER="admin"
     - MYSQL_PASSWORD="abc456123"
