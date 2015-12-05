@@ -1,0 +1,15 @@
+web:
+  image: sanqiu/Mage2-Docker
+  container_name: mage-web
+  ports:
+   - "80:80"
+  links:
+   - db:mysql
+db:
+  image: mysql
+  container_name: mage-db
+  environment:
+    - MYSQL_ROOT_PASSWORD="root"
+    - MYSQL_DATABASE=magento2
+    - MYSQL_USER="admin"
+    - MYSQL_PASSWORD="abc456123"
