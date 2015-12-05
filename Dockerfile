@@ -19,5 +19,9 @@ RUN cd / && curl -sS https://getcomposer.org/installer | php5
 COPY auth.json  /root/.composer/auth.json
 RUN cd /var/www/html/ && php5 /composer.phar install
 
+#enable apache2 rewrite
+RUN a2enmod rewrite && sed '166y/None/All/' /etc/apache2/apache2.conf 
+
+
 CMD ["service apache2 start"]
 	
